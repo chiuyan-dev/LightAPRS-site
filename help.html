@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>帮助 · 轻迹 Light APRS</title><style>*{box-sizing:border-box}body{margin:0;background:#f5f8f6;color:#20352e;font:17px/1.8 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:820px;margin:auto;padding:36px 24px 60px}nav{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:38px}a{color:#08785e;text-underline-offset:4px}h1{font-size:40px;line-height:1.2;letter-spacing:-1px;margin-bottom:12px}h2{font-size:23px;margin:32px 0 12px}p{margin:10px 0}small{color:#63776d}.lead{padding:22px;border-left:4px solid #16866b;background:#e6f1eb;border-radius:4px 16px 16px 4px;margin:26px 0}footer{border-top:1px solid #dce6df;margin-top:42px;padding-top:20px}@media(prefers-color-scheme:dark){body{background:#12201a;color:#dfebe4}a{color:#8dd9b8}.lead{background:#203a2e}small{color:#a2b9ac}footer{border-color:#345040}}</style><main><nav><a href="index.html">轻迹 · Light APRS</a><a href="privacy.html">隐私协议</a><a href="help.html">帮助</a></nav>
+<h1>帮助</h1><small>更新日期：2026-11-10</small><div class="lead">轻迹是一款轻量 APRS-IS 位置上报工具。底部依次为电台、记录、设置。首次使用从添加自己的台站开始。</div>
+<section><h2>开始使用</h2>
+<p>打开“设置”，点击右上角加号添加配置，也可以选择“导入脚本”。填写自己的呼号、SSID 和 APRS-IS Passcode，选择服务器及位置来源。保存后回到“电台”页，核对地图与备注，再手动上报。</p>
+<p>应用不会提供个人呼号或 Passcode，也不会自动导入内置台站。Passcode 不是其他账号的密码。导入脚本只解析支持的内容，不执行其中的命令。</p>
+</section>
+<section><h2>台站与多组配置</h2>
+<p>电台页呼号下方可以切换当前台站。设置页可编辑、复制或删除台站，左滑显示复制和删除操作。复制后的自动上报关闭，需要重新填写该配置的 Passcode。</p>
+<p>每组台站独立计时，到期后依次上报。不同地点同时使用相同呼号会使公开地图位置跳动，建议使用不同 SSID。删除台站不会删除它的历史记录。</p>
+</section>
+<section><h2>位置与全屏地图</h2>
+<p>设备定位模式使用手机位置；固定位置模式填写 WGS 84 十进制度数，南纬、西经使用负数。固定坐标也可在电台页点“选点”，轻点地图后确认保存。</p>
+<p>地图右上角按钮进入全屏，叉号退出；准星按钮回到当前台站。浏览附近信标不会直接改变自己的固定坐标。</p>
+</section>
+<section><h2>手动、小时级与实时上报</h2>
+<p>手动上报：在电台页发送当前台站，或在设置页发送所有已启用台站。</p>
+<p>小时级自动上报：在台站编辑页开启，支持 1、2、3、6、12 小时。系统决定后台执行时机，不能保证准点；失败会退避重试。</p>
+<p>实时模式：先在编辑页选择 15 秒、30 秒、1 分钟、2 分钟或 5 分钟，然后回电台页手动开始。实时模式使用设备位置并持续定位，正在实时运行的台站暂停原小时级上报。点击停止后恢复原有安排。</p>
+<p>实时模式会增加耗电。撤销定位权限、系统终止或手动划掉应用可能中断运行；重开应用后需手动开始实时模式。设备重启后需先解锁。</p>
+</section>
+<section><h2>附近信标</h2>
+<p>入口为“设置 → 地图与附近信标”。默认关闭，可选 25、50、100 公里和区域接收服务器。范围以当前台站为中心，固定位置台站按固定坐标查看。</p>
+<p>只有前台查看地图时更新。先从 aprs.tv 加载历史信标，每 2 分钟刷新，同时接收 APRS-IS 新广播；历史服务不可用时仍可接收实时信标。点信标可查看呼号、备注和最近更新时间，历史位置不代表此刻位置。</p>
+<p>可在设置或地图下方选择最近 30 分钟、1 小时、6 小时或 24 小时，默认 6 小时，最多显示 300 个。这些数据不写入上报记录。查询会把中心或区域范围及所选时间提供给相应服务；数据数量取决于第三方收录情况。</p>
+</section>
+<section><h2>图标、设备标识与备注</h2>
+<p>地图图标使用标准 APRS 符号编码；轻迹显示统一圆形样式，其他客户端可以显示不同外观。</p>
+<p>发送设备库改变的是报文设备标识，实际位置仍由轻迹上传；不会模拟实体电台的射频或硬件能力。接收网站的型号识别可能不同。</p>
+<p>位置备注最多 100 个 UTF-8 字节，中文和符号可能占多个字节；不支持换行或控制字符。部分旧客户端无法显示中文。</p>
+<p>aprs.tv 支持其专用的 E1[文字]、E3[文字] 等备注特效。可将标记直接填入备注；效果由该网站渲染，其他客户端可能显示原始标记。</p>
+</section>
+<section><h2>记录、筛选与导出</h2>
+<p>记录页的标题、搜索和筛选区固定在顶部，下方按日期显示记录。可以按台站、成功或失败筛选，也可以搜索呼号、台站名称及报文。</p>
+<p>点开记录查看结果、位置与原始报文。右上角菜单导出当前筛选的 CSV，或清空所有记录。导出包含位置等公开报文信息，请自行确认分享对象。</p>
+<p>“已发送”表示 APRS-IS 登录验证通过且 TCP 写入完成，不代表任何网站已显示；协议没有逐条报文的收录回执。</p>
+</section>
+<section><h2>常见问题</h2>
+<p>无法登录：核对基础呼号、SSID、Passcode、服务器地址和端口；地址不要填写 http:// 前缀。</p>
+<p>自动上报延迟：检查后台 App 刷新、低电量模式与定位授权。后台设备定位需要合适的定位权限，固定位置上报无需 GPS；iOS 仍可能推迟执行。</p>
+<p>新图标没有立即显示：先返回桌面或应用资源库查看；系统有时会短暂缓存图标，不需要卸载应用。</p>
+<p>不要把轻迹用于需要保证持续在线或准点送达的紧急追踪。</p>
+</section>
+<section><h2>帮助与反馈</h2>
+<p>可通过文档仓库的 Issues 提交问题。建议描述应用版本、操作步骤和预期结果；Issues 是公开页面，请勿提交 Passcode、精确位置或其他个人资料。</p>
+<p><a href="https://github.com/chiuyan-dev/LightAPRS-site/issues">反馈问题 · GitHub Issues</a></p>
+<p><a href="https://www.aprs-is.net/Connecting.aspx">APRS-IS 连接说明</a></p>
+</section>
+<footer><small>轻迹 Light APRS · <a href="https://github.com/chiuyan-dev/LightAPRS-site">文档仓库</a> · 不含统计脚本</small></footer></main></html>
